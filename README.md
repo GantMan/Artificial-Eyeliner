@@ -33,6 +33,10 @@ Script to apply artificial eyeliner using face landmark points detected by dlib.
 ## Flow Chart:
 <img src="https://github.com/kaushil24/Artificial-Eyeliner/blob/master/Media/working.jpg" height="1000">
 
+## To Do:
+- [ ] Analyze the result on different eye shapes and color
+- [ ] Dynamically change eyeliner thickness based on the distance between subject and camera
+
 ## Version Info:
 * Python - 3.6
 * Numpy - 1.17.4
