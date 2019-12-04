@@ -38,6 +38,8 @@ Script to apply artificial eyeliner using face landmark points detected by dlib.
 - [ ] Dynamically change eyeliner thickness based on the distance between subject and camera.
 - [ ] Add support for people wearing spectacles. 
 
+## Pull requests are always welcomed :D 
+
 ## Version Info:
 * Python - 3.6
 * Numpy - 1.17.4
