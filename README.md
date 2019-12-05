@@ -1,5 +1,5 @@
 # Artificial-Eyeliner
-Script to apply artificial eyeliner using face landmark points detected by dlib.
+A script to artificially apply eyeliner on live video (Webcam videos and images also supported) 
 
 ## Demo:
 <table>
@@ -17,6 +17,42 @@ Script to apply artificial eyeliner using face landmark points detected by dlib.
   </tr>
  </table>
  
+ <hr>
+ 
+ ## Project Structure:
+ 
+ ### Flow Chart:
+<img src="https://github.com/kaushil24/Artificial-Eyeliner/blob/master/Media/working.jpg" height="1000">
+
+### Code Overview:
+* ```lndMrkDetector()``` : To extract 68 facial landmark points
+* ```getEyeLandmarkPts()``` : To extract eye landmark points (pt no 37-48)
+* ```getEyelinerPoints()``` : To interpolate those eye landmark points
+* ```drawEyeliner()```: To draw eyeliner on interpolated points
+ 
+ <hr>
+ 
+ ## Getting Started:
+ ### Clone the repo using:<br>
+ ```git clone https://github.com/kaushil24/Artificial-Eyeliner/```
+ 
+ ### Starting virtual environment:
+ * Install the ```venv``` module:<br>
+ ```python3 -m pip install --user virtualenv```
+ * Setup the virtual environment and activate it:<br>
+ ```python3 -m venv env``` <br>
+ ```source env/bin/activate```
+  
+ ### Installing the dependencies:
+ * To install **Dlib** please visit this article-https://www.pyimagesearch.com/2017/03/27/how-to-install-dlib/
+ * Rest of the dependencies:
+ ```pip3 install -r requirements.txt```
+ 
+ ### Sample Test:
+ ```python3 eyeliner.py -v "Media/Sample Video.mp4" -s "Output"```
+ 
+ <hr>
+ 
  ## CLI Usage
  ```python eyeliner.py [-i image] [-v video] [-d dat] [-t thickness] [-c color] [-s save]```
  * ```-i ```: Location of image you want to apply eyeliner on
@@ -26,17 +62,15 @@ Script to apply artificial eyeliner using face landmark points detected by dlib.
  * ```-d```: Path to your ```shape_predictor_68_face_landmarks.dat``` file. Default value is the root unless you have the ```shape_predictor_68_face_landmarks.dat``` file stored at some other location you need not use this argument.
  * ```-c ```: Change color of the eyeliner. Use ```-c 255 255 255```. Defaule = ```0 0 0```.
  * ```-s ```: Location and file name you want to save the output to. **NOTE** The program automatically adds extension while saving the file. **NOTE**: If a file with same name already exists, it will overwrite that file.
- 
-### Sample Usage:
-```python eyeliner.py -v "Media/Sample Video.mp4" -t 2 -c 203 22 234 -s "Media/Output Video" ```
- 
-## Flow Chart:
-<img src="https://github.com/kaushil24/Artificial-Eyeliner/blob/master/Media/working.jpg" height="1000">
+
+<hr>
 
 ## To Do:
-- [ ] Analyze the result on different eye shapes and color.
+- [ ] Analyze the results on different eye shapes and color.
 - [ ] Dynamically change eyeliner thickness based on the distance between subject and camera.
 - [ ] Add support for people wearing spectacles. 
+
+<hr>
 
 ## Pull requests are always welcomed :D 
 
