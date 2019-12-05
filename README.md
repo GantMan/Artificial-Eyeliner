@@ -24,6 +24,13 @@ A script to artificially apply eyeliner on live video (Webcam videos and images 
  ### Flow Chart:
 <img src="https://github.com/kaushil24/Artificial-Eyeliner/blob/master/Media/working.jpg" height="1000">
 
+### Project Explaination:
+* We first locate the faces present in an image. 
+* On each face detected, we locate 68 facial landmark points.
+* We extract the points representing eyes (pt no. 37-49) out of those 68 points.
+* We interpolate over the extracted eye landmark points to generate a curve. 
+* We draw over this curve and we have our eyeliner.
+
 ### Code Overview:
 * ```lndMrkDetector()``` : To extract 68 facial landmark points
 * ```getEyeLandmarkPts()``` : To extract eye landmark points (pt no 37-48)
